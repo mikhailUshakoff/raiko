@@ -37,6 +37,6 @@ RUN cargo build -F cuda --release --features "risc0"
 # Expose port 8080
 EXPOSE 8080
 
-# Build the project with Cargo using CUDA and risc0 features
-CMD ["cargo", "run", "-F", "cuda", "--release", "--features", "risc0"]
+# Run the already built binary
+CMD ["./target/release/raiko-host"]
 
