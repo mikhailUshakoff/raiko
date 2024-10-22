@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y \
     pkg-config \
     curl \
     git \
+    wget \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Rust and Cargo
