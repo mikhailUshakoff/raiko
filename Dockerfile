@@ -31,6 +31,8 @@ ENV PATH="/root/.risc0/bin:${PATH}"
 RUN make install
 # Build the project
 RUN make build
+# Build the project with Cargo using CUDA and risc0 features
+RUN cargo build -F cuda --release --features "risc0"
 
 # Expose port 8080
 EXPOSE 8080
