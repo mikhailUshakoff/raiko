@@ -25,6 +25,8 @@ COPY . .
 # Export the TARGET environment variable
 ENV TARGET=risc0
 
+# Manually add rzup to PATH in the Dockerfile
+ENV PATH="/root/.risc0/bin:${PATH}"
 # Build the project dependencies
 RUN make install
 
