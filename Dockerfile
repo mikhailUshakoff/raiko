@@ -29,6 +29,8 @@ ENV TARGET=risc0
 ENV PATH="/root/.risc0/bin:${PATH}"
 # Build the project dependencies
 RUN make install
+# Build the project
+RUN make build
 
 # Expose port 8080
 EXPOSE 8080
